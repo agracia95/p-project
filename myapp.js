@@ -1,6 +1,33 @@
 // myapp.js
 
-var manifestUri = '//storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
+
+var manifestUri = null;
+
+function selectLinkByIndex(indice){
+  var resultado;
+  switch (indice){
+    case 0:
+     resultado='//storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
+     break;
+    case 1:
+    resultado='//storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';
+    break;
+    case 2:
+    resultado='//storage.googleapis.com/shaka-demo-assets/tos-ttml/dash.mpd';
+    break;
+    case 3:
+    resultado='//storage.googleapis.com/shaka-live-assets/player-source.mpd';
+    break;
+    case 4:
+    resultado='//wowzaec2demo.streamlock.net/live/bigbuckbunny/manifest_mpm4sav_mvtime.mpd';
+    break;
+    default:
+    console.log('Intentando reproducir un video que no existe')
+
+  }
+  manifestUri=resultado;
+  console.log(resultado);
+}
 
 function initApp() {
   // Install built-in polyfills to patch browser incompatibilities.
@@ -45,4 +72,44 @@ function onError(error) {
   console.error('Error code', error.code, 'object', error);
 }
 
-document.addEventListener('DOMContentLoaded', initApp);
+function loadVideo(n) {
+  var indice=n;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("visor").innerHTML =
+      this.responseText;
+      selectLinkByIndex(indice);
+      initApp();
+    }
+  };
+  xhttp.open("GET", "video.html", true);
+  xhttp.send();
+}
+
+  var slideIndex = 1;
+
+function inicializar(){
+  showDivs(slideIndex);
+}
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+//Llamar a initApp cuando se quiera empezar a reproducir el video
+//document.addEventListener('DOMContentLoaded', initApp);
+
+document.addEventListener('DOMContentLoaded', inicializar);

@@ -5,11 +5,37 @@
     <script src="dist/shaka-player.compiled.js"></script>
     <!-- Your application source: -->
     <script src="myapp.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilos.css"> 
+
   </head>
   <body>
-    <video id="video"
-           width="640"
-           poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
-           controls autoplay></video>
+    <header>
+      <h2 align="center">Welcome to IRAC34 DASH Client</h2>
+    </header>
+
+    <section id="visor">
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="images/startrek.jpg" style="width:100%" onclick="loadVideo(0)">
+  <img class="mySlides" src="images/sintel.jpg" style="width:100%" onclick="loadVideo(1)">
+  <img class="mySlides" src="images/tearsofsteel.jpg" style="width:100%" onclick="loadVideo(2)">
+  <img class="mySlides" src="images/git.jpg" style="width:100%" onclick="loadVideo(3)">
+  <img class="mySlides" src="images/bunnylive.jpg" style="width:100%" onclick="loadVideo(4)">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+
+
+  </script>
+
+    </section>
   </body>
 </html>

@@ -1,0 +1,28 @@
+header{
+
+}
+
+section{
+text-align: center;
+padding: 50px;
+}
+
+video {
+	display:inline-block;
+}
+
+@keyframes example {
+    from {box-shadow: 0 0 0 99999px rgba(0, 0, 0, 0);}
+    to {box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);}
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.w3-display-container{
+	 width: 32%;
+	 box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);
+	 animation-name: example;
+     animation-duration: 5s;
+}
