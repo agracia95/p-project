@@ -2,6 +2,7 @@
 
 
 var manifestUri = null;
+var licenseServer = '//cwip-shaka-proxy.appspot.com/cookie_auth';
 
 function selectLinkByIndex(indice){
   var resultado;
@@ -10,7 +11,7 @@ function selectLinkByIndex(indice){
      resultado='//storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
      break;
     case 1:
-    resultado='//storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';
+    resultado='//storage.googleapis.com/shaka-demo-assets/sintel-widevine/dash.mpd';
     break;
     case 2:
     resultado='//storage.googleapis.com/shaka-demo-assets/tos-ttml/dash.mpd';
@@ -53,6 +54,21 @@ function initPlayer() {
 
   // Listen for error events.
   player.addEventListener('error', onErrorEvent);
+
+  //Configuramos el servidor de licencias de DRM Widevine de Google
+  player.configure({
+    drm: {
+      servers: { 'com.widevine.alpha': licenseServer }
+    }
+  });
+
+  player.getNetworkingEngine().registerRequestFilter(function(type, request) {
+    if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
+      //Permite que la aplicacion envie las credenciales (cookies) a terceras partes (al servidor de licencias)
+      //Es necesario que el servidor de licencias tambien acepte cookies de terceras partes (Access-Control-Allow-Credentials)
+      request.allowCrossSiteCredentials = true;
+    }
+  });
 
   // Try to load a manifest.
   // This is an asynchronous process.
