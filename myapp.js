@@ -60,6 +60,7 @@ function initPlayer() {
     drm: {
       servers: { 'com.widevine.alpha': licenseServer }
     }
+
   });
 
   player.getNetworkingEngine().registerRequestFilter(function(type, request) {

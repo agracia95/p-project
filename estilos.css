@@ -1,15 +1,21 @@
-header{
 
+header{
+	color: white;
+	font-weight: bolder;
 }
 
 footer{
 	text-align: center;
-	padding: 20px;
+	padding: 5px;
 }
 
+body{
+	background: url("https://klingshirnandsons.com/wp-content/uploads/2015/07/wood-002644-charcoal.jpg");
+
+}
 section{
 	text-align: center;
-	padding: 50px;
+	padding: 5px;
 }
 
 video {
