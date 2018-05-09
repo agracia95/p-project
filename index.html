@@ -6,6 +6,7 @@
     <!-- Your application source: -->
     <script src="myapp.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,12 +25,13 @@
     <section id="visor">
 
 <div class="w3-content w3-display-container">
+	
   <img class="mySlides" src="images/startrek.jpg" style="width:100%" onclick="loadVideo(0)">
   <img class="mySlides" src="images/sintel.jpg" style="width:100%" onclick="loadVideo(1)">
   <img class="mySlides" src="images/tearsofsteel.jpg" style="width:100%" onclick="loadVideo(2)">
   <img class="mySlides" src="images/git.jpg" style="width:100%" onclick="loadVideo(3)">
   <img class="mySlides" src="images/bunnylive.jpg" style="width:100%" onclick="loadVideo(4)">
-
+  <img class="play_btn" src="images/play_btn.png">
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -43,7 +45,8 @@
     </section>
 
   <footer>
-<input id="backButton" type="button" value="Return to menu" onClick="location.href=location.href">
+<!--input id="backButton" type="button" value="Return to menu" onClick="location.href=location.href"-->
+<button class="btn" onclick="location.href=location.href" id="backButton"><i class="fa fa-home"></i> Return to menu</button>
 <p class= "final" align = "center" style="color: white"> IRAC 2017/2018 TEAM 34: Álvaro Gracia de la Rica, Ricardo Manzanedo González, Miguel Gamallo Gascón y Guillermo Pajares Martín </p>
   </footer>
 </div>

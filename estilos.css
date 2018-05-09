@@ -27,18 +27,32 @@ video {
     to {box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);}
 }
 
-.mySlides {display:none}
+
+.mySlides {
+	display:none;
+	z-index: 2;
+
+}
+.mySlides:hover {
+	 opacity: 0.5;
+}
+.play_btn{
+
+	position: relative;
+	width: 25%;
+	top: -250px;
+	z-index: 1;
+	padding: 0px;
+
+}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
 
 .w3-display-container{
 	 width: 25%;
-/*	
-	 box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);
-	 animation-name: example;
-     animation-duration: 5s;
-*/
 }
+
+
 
 #load{
     width:100%;
@@ -48,6 +62,21 @@ video {
     background:url("images/load.gif") no-repeat center center rgba(0,0,0,0.25)
 }
 
+
+.btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 5px 7px; /* Some padding */
+    font-size: 14px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
 #backButton{
-  display: none
+	display: none
+
 }
