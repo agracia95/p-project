@@ -10,7 +10,7 @@ footer{
 }
 
 body{
-	background: url("https://klingshirnandsons.com/wp-content/uploads/2015/07/wood-002644-charcoal.jpg");
+	background-image: url("images/background.jpg");
 
 }
 section{
@@ -32,7 +32,7 @@ video {
 .w3-badge {height:13px;width:13px;padding:0}
 
 .w3-display-container{
-	 width: 32%;
+	 width: 25%;
 /*	
 	 box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);
 	 animation-name: example;
@@ -46,4 +46,8 @@ video {
     position:fixed;
     z-index:9999;
     background:url("images/load.gif") no-repeat center center rgba(0,0,0,0.25)
+}
+
+#backButton{
+  display: none
 }

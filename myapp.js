@@ -98,6 +98,9 @@ function loadVideo(n) {
       this.responseText;
       selectLinkByIndex(indice);
       initApp();
+
+      document.getElementById("backButton").style.display =
+      "inline-block";
     }
   };
   xhttp.open("GET", "video.html", true);
