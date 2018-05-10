@@ -95,3 +95,17 @@ video {
  	display: none;
  }
  */
+
+ .btn2 {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 5px 7px; /* Some padding */
+    font-size: 14px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn2:hover {
+    background-color: RoyalBlue;
+    
+}
