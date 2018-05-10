@@ -30,20 +30,30 @@ video {
 
 .mySlides {
 	display:none;
-	z-index: 2;
+	
 
 }
 .mySlides:hover {
 	 opacity: 0.5;
 }
 .play_btn{
+	max-width: 30%;
+}
 
-	position: relative;
-	width: 25%;
-	top: -250px;
-	z-index: 1;
-	padding: 0px;
-
+#hover {
+	position: absolute;
+	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	height: 100%;
+  	width: 100%;
+  	z-index: -1;
+  	opacity: 1;
+  	background-color: #404040;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
@@ -74,9 +84,14 @@ video {
 
 .btn:hover {
     background-color: RoyalBlue;
+    
 }
 
-#backButton{
-	display: none
-
+#backButton {
+	display: none;
 }
+/*
+ #progress-bar {
+ 	display: none;
+ }
+ */
