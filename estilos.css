@@ -109,3 +109,19 @@ video {
     background-color: RoyalBlue;
     
 }
+
+#tuiter {
+
+    padding: 6px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    background: #55ACEE;
+    color: white;
+
+}
+
+#tuiter:hover {
+    opacity: 0.7;
+}
