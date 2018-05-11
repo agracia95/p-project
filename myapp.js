@@ -23,7 +23,7 @@ function selectLinkByIndex(indice){
     resultado='//wowzaec2demo.streamlock.net/live/bigbuckbunny/manifest_mpm4sav_mvtime.mpd';
     break;
     default:
-    console.log('Intentando reproducir un video que no existe')
+    console.log('Intentando reproducir un video que no existe');
 
   }
   manifestUri=resultado;
